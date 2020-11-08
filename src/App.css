@@ -1,0 +1,57 @@
+.App {
+  text-align: left;
+}
+.container{
+  background: #fff;
+  width: 60%;
+  height: max-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 5px 20px 20px 20px;
+}
+.add-input{
+  width: 90%;
+  padding: 8px;
+  margin-right: 10px;
+}
+ul{
+  list-style: none;
+  padding-left: 5px;
+}
+ul li{
+  min-height: 45px;
+}
+.float-right{
+  float: right;
+}
+.addbtn{
+  padding: 8px;
+  border: 2px solid #7aafa5;
+  color: #7aafa5 ;
+  background: #fff;
+}
+.done-btn{
+  padding: 8px;
+  border: 2px solid #6cb78c;
+  color: #6cb78c ;
+  background: #fff;
+}
+.task-completed{
+  text-decoration: line-through;
+  color: lightgreen;
+}
+.not-done{
+  padding: 8px;
+  border: 2px solid #c5c9cc;
+  color: #c5c9cc ;
+  background: #fff;
+}
+.remove-btn{
+  padding: 8px;
+  border: 2px solid #aa4d46;
+  color: #aa4d46 ;
+  background: #fff;
+  margin: 0 10px;
+}
