@@ -34,7 +34,6 @@ class AddTask extends React.Component {
     }
     toggleTaskStatus(id) {
         const task = this.state.tasks.find((x) => x.id === id);
-        debugger;
         if (task) {
             task.isComplete = !task.isComplete;
             this.setState({
