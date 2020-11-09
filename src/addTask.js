@@ -1,5 +1,7 @@
 import { render } from '@testing-library/react';
 import React, { useState } from 'react';
+import Status from './status';
+import Remove from './remove';
 
 let idGen = 0;
 class AddTask extends React.Component {
@@ -52,44 +54,11 @@ class AddTask extends React.Component {
                 </button>
                 <ul>
                     {this.state.tasks.map((data) => {
-                        console.log(data)
                         return <li id={data.id} key={data.id} text={data.text} className={(data.isComplete) ? 'task-completed' : ''}>{data.text} <div className="float-right"><Status isComplete={data.isComplete} toggleTaskStatus={() => this.toggleTaskStatus(data.id)} /><Remove onClick={() => this.deleteTask(data.id)} /> </div> </li>
                     })}
                 </ul>
             </div>
         )
     }
-
-}
-function Done(props) {
-    return (
-        <button className="done-btn" onClick={props.onClick}>Done</button>
-    )
-}
-function Remove(props) {
-    return (
-        <button className="remove-btn" onClick={props.onClick}>Remove</button>
-    )
-}
-
-function NotDone(props) {
-    return (
-        <button className="not-done" onClick={props.onClick}>Not Done</button>
-    )
-}
-
-class Status extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
-    render() {
-        const isComplete = this.props.isComplete;
-        if (isComplete) {
-            return <NotDone onClick={this.props.toggleTaskStatus} />
-        }
-        return <Done onClick={this.props.toggleTaskStatus} />
-    }
-
 }
 export default AddTask;
